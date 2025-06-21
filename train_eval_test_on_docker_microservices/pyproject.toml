@@ -1,0 +1,19 @@
+[project]
+name = "train-eval-test-on-docker-microservices"
+version = "0.1.0"
+description = "Train Eval and Test a ML model on docker micro services"
+authors = [
+    {name = "Sualeh Qureshi",email = "sualeh.qureshi@tomtom.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "train_eval_test_on_docker_microservices", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
