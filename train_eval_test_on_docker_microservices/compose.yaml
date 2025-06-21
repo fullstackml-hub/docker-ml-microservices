@@ -1,0 +1,25 @@
+services:
+  train:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python main.py --mode train --num-processes 2 --epochs 1 --save_model
+    volumes:
+      - ./../data:/train_eval_test_on_docker_microservices/../data
+      - ./../models:/train_eval_test_on_docker_microservices/../models
+  eval:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python main.py --mode eval
+    volumes:
+      - ./../data:/train_eval_test_on_docker_microservices/../data
+      - ./../models:/train_eval_test_on_docker_microservices/../models
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python main.py --mode test
+    volumes:
+      - ./../data:/train_eval_test_on_docker_microservices/../data
+      - ./../models:/train_eval_test_on_docker_microservices/../models
