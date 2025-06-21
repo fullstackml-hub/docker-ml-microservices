@@ -63,7 +63,7 @@ docker compose version
 
 ### 1. 📥 Clone the Repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/fullstackml-hub/docker-ml-microservices.git
 cd docker_compose_for_train_eval_test
 ```
 
